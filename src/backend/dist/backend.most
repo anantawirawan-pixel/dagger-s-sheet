@@ -1,0 +1,49 @@
+// Version: 4.0.0
+type CharacterId__116412676 = Text;
+type CharacterImageKey__788427654 = Text;
+type Data__80296667<K, V> =
+  {var count : Nat__1040412405; kvs : [var ?(K, V)]};
+type HomebrewArtKey__952197539 = Text;
+type HomebrewItemId__501536456 = Text;
+type Internal__41346355<K, V> =
+  {children : [var ?Node__1000929467<K, V>]; data : Data__80296667<K, V>};
+type Leaf__712614010<K, V> = {data : Data__80296667<K, V>};
+type Map__222667396<K, V> = Map__912772452<K, V>;
+type Map__709709801<K, V> =
+  {var root : Node__1000929467<K, V>; var size : Nat__1040412405};
+type Map__912772452<K, V> = Map__709709801<K, V>;
+type Nat__1040412405 = Nat__920180692;
+type Nat__920180692 = Nat;
+type NewActor__487045309 = {characterImages : Map__222667396<Text, Text>};
+type NewActor__536670996 =
+  {
+    characterImages : Map__222667396<Text, Text>;
+    homebrewArt : Map__222667396<Text, Text>
+  };
+type NewActor__58440520 = {};
+type Node__1000929467<K, V> =
+  {#internal : Internal__41346355<K, V>; #leaf : Leaf__712614010<K, V>};
+type OldActor__108942598 = {};
+type OldActor__166002484 = {};
+type OldActor__520018673 = {characterImages : Map__222667396<Text, Text>};
+{
+  "20260604_000000_Init" : OldActor__166002484 -> NewActor__58440520;
+  "20260604_120000_AddImageStorage" :
+    OldActor__108942598 -> NewActor__487045309;
+  "20260605_000000_AddHomebrewArt" :
+    (old : OldActor__520018673) -> NewActor__536670996
+}
+actor  {
+  stable characterImages :
+    {
+      var root :
+        Node__1000929467<CharacterId__116412676, CharacterImageKey__788427654>;
+      var size : Nat__1040412405
+    };
+  stable homebrewArt :
+    {
+      var root :
+        Node__1000929467<HomebrewItemId__501536456, HomebrewArtKey__952197539>;
+      var size : Nat__1040412405
+    }
+};

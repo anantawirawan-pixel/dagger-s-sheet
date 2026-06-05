@@ -1,0 +1,23 @@
+{
+  "overview": "A Daggerheart TTRPG character sheet web app with full SRD mechanics, trackers, dice roller, combat tracker, and party management.",
+  "features": [
+    "Complete character creation wizard with all Daggerheart classes, ancestries, and communities",
+    "Interactive HP hearts, stress skulls, and hope stars trackers with sounds",
+    "3D geometric dice roller with domain-specific sounds",
+    "Spell compendium with cast animations per domain",
+    "Combat tracker with condition badges and duration tracking",
+    "Party management with campaign journal and roster PDF",
+    "Homebrew weapons, spells, and ancestry creators",
+    "Light and dark mode with dark fantasy aesthetic"
+  ],
+  "category": "game",
+  "tags": [
+    "ttrpg",
+    "daggerheart",
+    "character-sheet",
+    "dark-fantasy",
+    "dice-roller",
+    "game-tools"
+  ],
+  "last_updated": "2026-06-05T06:27:24.982Z"
+}
